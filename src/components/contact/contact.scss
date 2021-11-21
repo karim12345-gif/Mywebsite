@@ -1,0 +1,143 @@
+.contact {
+  background: linear-gradient(to right, #222222 50%, #201f1f 50%);
+  display: flex;
+
+  .left {
+    flex: 1;
+
+    img {
+      height: 100%;
+    }
+
+    @media screen and (max-width: 1024px) {
+      img {
+        height: 30%;
+        margin-top: 400px;
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+      img {
+        margin-top: 250px;
+        height: 30%;
+        margin-left: -20px;
+      }
+    }
+  }
+
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      color: white;
+      font-size: 40px;
+    }
+
+    form {
+      width: 80%;
+      height: 75%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+      span {
+        color: white;
+        font: 100%;
+        margin-top: -50px;
+        margin-left: 40px;
+      }
+
+      input {
+        width: 300px;
+        height: 40px;
+        font-size: 14px;
+        margin: 15px;
+
+        &::name {
+          color: crimson;
+        }
+      }
+
+      textarea {
+        width: 300px;
+        height: 200px;
+        font-size: 14px;
+        margin-bottom: 100px;
+      }
+
+      button {
+        width: 180px;
+        height: 30px;
+        font-size: 20px;
+        color: whitesmoke;
+        background-color: crimson;
+        border: none;
+        border-radius: 50px;
+        margin-bottom: 100px;
+        font-weight: 500;
+        cursor: pointer;
+
+        &::name {
+          color: crimson;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      span {
+        font-size: 30px;
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      h2 {
+        font-size: 50px;
+      }
+      input {
+        font-size: 30px;
+      }
+
+      button {
+        width: 280px;
+        height: 40px;
+      }
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .right {
+      form {
+        input {
+          font-size: 25px;
+          margin-left: 100px;
+        }
+
+        textarea {
+          font-size: 25px;
+          margin-left: 80px;
+          margin-top: 20px;
+        }
+
+        button {
+          width: 200px;
+          height: 40px;
+          margin-bottom: 130px;
+          margin-top: -80px;
+        }
+
+        span {
+          font-size: 18px;
+          font-weight: 500;
+          margin-top: -125px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

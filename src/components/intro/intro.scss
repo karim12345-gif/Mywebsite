@@ -1,0 +1,336 @@
+@import "../../global.scss";
+
+.intro {
+  background: linear-gradient(to right, #222222 50%, #201f1f 50%);
+  display:flex;
+
+  // animation
+  .right-content {
+    display: flex;
+    justify-content: center;
+    
+    .phone {
+      width: 90%;
+      margin-right: -25px;
+      margin-top: 10px;
+    }
+
+    .orange{
+      position: absolute;
+      margin-right: -850px;
+      margin-top: 550px;
+      animation: move2 5s infinite;
+      transition: all .4s ease-in-out;
+    }
+
+    .message1 {
+      position: absolute;
+      margin-top: 30px;
+      margin-left:1000px;
+      animation: move 5s infinite;
+      transition: all .4s ease-in-out;
+    }
+
+    .message2 {
+      position: absolute;
+      margin-right: 1200px;
+      margin-top: 500px;
+      transition: all .4s ease-in-out;
+      animation: move 5s infinite;
+      animation-delay: .5s;
+      transition: all .4s ease-in-out;
+
+     
+    }
+
+
+    // Header Animation 
+    @keyframes move{
+      0%{
+          transform: translateY(90) rotate(10) scale(1) translateX(90);
+      }
+      50%{
+          transform: translateY(-10px) rotate(20deg) scale(1.1) translateX(10px);
+      }
+      100%{
+          transform: translateY(10)  rotate(0deg) scale(1) translateX(10);
+      }
+    }
+
+
+
+    @keyframes move2{
+      0%{
+          transform: translateY(0) rotate(0) scale(1) translateX(0);
+      }
+      50%{
+          transform: translateY(-10px) rotate(60deg) scale(1.1) translateX(10px);
+      }
+      100%{
+          transform: translateY(30)  rotate(0deg) scale(1) translateX(90);
+      }
+  }
+
+ 
+
+
+   // tablets (Done )
+ @media screen and (max-width: 1024px) {
+    .phone{
+      // width: 90%;
+      margin-right: 0px;
+      margin-top: 0px;
+    }
+
+    .message1{
+      margin-top: 10px;
+      margin-right: 450px;
+
+    
+    }
+
+    .message2{
+      margin-left: 1700px;
+      margin-top: 500px;
+    }
+
+    .orange{
+      margin-right: 800px;
+      margin-top: 550px;
+    }
+  }
+
+
+  // Phones 
+  @media screen and (max-width: 576px){
+    .phone{
+      width: 0%;
+      
+    }
+    
+    .message1{
+      margin-left: 700px;
+      margin-top: 35px;
+     
+    }
+
+    .message2{
+      margin-left: 1050px;
+      margin-top: 435px;
+    }
+
+
+
+    .orange{
+      margin-left: 850px;
+      margin-top: 235px;
+    }
+
+
+  }
+
+    
+  }
+
+  .middle {
+    h1 {
+      font-size: 60px;
+      font-weight: 500;
+      margin-right: 10px;
+      margin-top: 190px;
+      position: relative;
+      color: #dc143c;
+      animation: bounceArrow 2s infinite;
+
+     
+      @keyframes bounceArrow {
+        0% {
+          top: 0px;
+        }
+        50% {
+          top: 40px;
+        }
+        100% {
+          top: 0px;
+        }
+      }
+    }
+
+    span {
+      width: 100px;
+      height: 100px;
+    }
+   
+    @media screen and (max-width: 1024px) {
+      h1{
+        margin-right:-5px;
+      }
+    }
+
+    @media screen and (max-width: 576px){
+      h1{
+   
+        margin-left: -5px;
+        margin-top: 150px;
+        font-size: 40px;
+        font-weight: 700;
+      }
+  }
+}
+
+  .right {
+    position: absolute;
+    margin-top: 100px;
+    .wrapper{
+      img {
+        width: 40px;
+        justify-content: center;
+      }
+  
+      h2 {
+        font-size: 50px;
+        color: #f0ffff;
+        margin-left: 30px;
+        z-index: 1;
+      }
+  
+
+    }
+
+    @media screen and (max-width: 1024px) {
+      h2{
+        margin-left: 40px;
+        font-size: 50px;
+        margin-top: -5px;
+      }
+    }
+
+    @media screen and (max-width: 576px){
+      h2{
+        margin-left: 30px;
+        margin-top: -5px;
+        font-size: 35px;
+      }
+
+    }
+
+    
+   
+   
+
+    
+  }
+
+
+  .left {
+    flex: 0.7;
+   
+    h3 {
+      font-size: 40px;
+      margin-top: 300px;
+      margin-left: 10px;
+      color: #f0ffff;
+      font-weight: 700;
+    }
+
+    span {
+      font-size: 40px;
+      font-weight: 700;
+      color: #dc143c;
+     
+    }
+
+    .ityed-cursor {
+      animation: blink 2s infinite;
+    }
+
+    @keyframes blink {
+     
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @media screen and (max-width:  1024px) {
+
+        h3{
+          margin-left: 10px;
+          margin-top: 330px;
+        }
+    }
+
+
+    @media screen and (max-width: 576px){
+
+      h3{
+        margin-left: 30px;
+        font-size: 20px;
+      }
+
+     
+    }
+  }
+
+
+
+  .arrow-direction{
+    a {
+      position: absolute;
+      margin-top: 770px;
+      margin-left: -640px;
+
+      img {
+        width: 65px;
+        animation: arrowBlink 2s infinite;
+        filter: invert(22%) sepia(89%) saturate(4930%) hue-rotate(338deg)
+          brightness(86%) contrast(101%);
+      }
+
+      @keyframes arrowBlink {
+        100% {
+          opacity: 0;
+        }
+      }
+      
+    }
+    @media screen and (max-width:1024px){
+      a{
+        margin-top: 1180px;
+        margin-left: -435px;
+      
+      }
+      
+    }
+
+
+    @media screen and (max-width: 576px){
+      a{
+        margin-top: 670px;
+        
+  
+      }
+      
+    }
+
+
+
+    
+
+  }
+
+  
+
+
+
+  }
+
+  
+    
+   
+   
+  
+
+  
